@@ -1,0 +1,236 @@
+.login-page {
+  min-height: 100vh;
+  background: #032f4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-card {
+  width: 410px;
+  background: #f4f5f7;
+  border-radius: 14px;
+  padding: 34px 38px 24px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+.login-top-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 36px;
+}
+
+.left-logo-text {
+  line-height: 1.05;
+}
+
+.small-tech {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1b5d78;
+  letter-spacing: 0.4px;
+}
+
+.small-destination {
+  font-size: 12px;
+  color: #7d8b96;
+  margin-top: 2px;
+}
+
+.small-pakistan {
+  font-size: 16px;
+  font-weight: 800;
+  color: #18a286;
+  margin-top: 3px;
+  letter-spacing: 0.4px;
+}
+
+.pseb-box {
+  width: 72px;
+  height: 72px;
+  background: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #17344a;
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.login-title {
+  text-align: center;
+  color: #17344a;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.login-underline {
+  width: 98px;
+  height: 4px;
+  background: #1f7d96;
+  border-radius: 999px;
+  margin: 10px auto 28px;
+}
+
+.login-field {
+  margin-bottom: 22px;
+}
+
+.login-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #17344a;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+
+.login-field input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #d7dde4;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #17344a;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login-field input::placeholder {
+  color: #9ba7b2;
+}
+
+.login-field input:focus {
+  border-color: #1f7d96;
+}
+
+.login-error {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #f9d7d9;
+  color: #9b1c1f;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-btn {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  background: #012746;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.login-btn:hover {
+  background: #022137;
+}
+
+.login-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.login-footer-text {
+  text-align: center;
+  color: #4d5f6f;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 28px;
+}
+
+.login-bottom-note {
+  text-align: center;
+  color: #8d98a3;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+.techdestination-logo {
+  width: clamp(150px, 44%, 190px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 1;
+}
+.login-top-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.techdestination-logo {
+  width: 185px;
+  max-width: 45%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.login-top-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+@media (max-width: 540px) {
+  .techdestination-logo {
+    width: 160px;
+    max-width: 58%;
+  }
+
+  .login-top-logos {
+    gap: 16px;
+  }
+}
+.login-top-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.techdestination-logo {
+  width: 185px;
+  max-width: 45%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.pseb-logo {
+  width: 82px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (max-width: 540px) {
+  .techdestination-logo {
+    width: 155px;
+  }
+
+  .pseb-logo {
+    width: 72px;
+  }
+}

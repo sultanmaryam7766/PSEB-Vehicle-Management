@@ -1,0 +1,768 @@
+/* =========================================================
+   CREATE TRIP
+   SAME THEME AS ADD USER / ADD VEHICLE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  background: #eef4f9;
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.create-trip-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f6f9fc 0%,
+      #edf4f9 100%
+    );
+
+  color: #153552;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.create-trip-content {
+  width: 100%;
+  max-width: 1328px;
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding:
+    30px
+    28px
+    48px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.create-trip-header {
+  width: 100%;
+  min-height: 108px;
+
+  margin-bottom: 20px;
+
+  padding:
+    20px
+    28px;
+
+  display: flex;
+  align-items: center;
+
+  border:
+    1px solid #dbe6ef;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8fbfe 100%
+    );
+
+  box-shadow:
+    0 5px 16px
+    rgba(25, 73, 113, 0.05);
+}
+
+.create-trip-header-icon {
+  width: 61px;
+  height: 61px;
+  min-width: 61px;
+
+  margin-right: 20px;
+
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #edf4ff;
+
+  color: #2876ef;
+}
+
+.create-trip-header-icon svg {
+  width: 30px;
+  height: 30px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.9;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.create-trip-header h1 {
+  margin: 0;
+
+  color: #0d3155;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.create-trip-section {
+  width: 100%;
+  min-height: 70px;
+
+  margin-bottom: 16px;
+
+  padding:
+    0
+    18px;
+
+  display: flex;
+  align-items: center;
+
+  border:
+    1px solid #dbe6ef;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 13px
+    rgba(25, 73, 113, 0.045);
+
+  color: #103b63;
+}
+
+.create-trip-section-icon {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+
+  margin-right: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #edf4ff;
+
+  color: #2876ef;
+}
+
+.create-trip-section-icon svg {
+  width: 18px;
+  height: 18px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 2;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.create-trip-section span {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.create-trip-form {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  column-gap: 20px;
+  row-gap: 26px;
+
+  padding:
+    30px
+    28px
+    26px;
+
+  border:
+    1px solid #dbe6ef;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 17px
+    rgba(28, 65, 98, 0.05);
+}
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.create-trip-field {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.create-trip-field label {
+  margin-bottom: 11px;
+
+  color: #16436b;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.create-trip-field input,
+.create-trip-field select,
+.create-trip-datepicker {
+  width: 100%;
+  height: 49px;
+
+  padding:
+    0
+    18px;
+
+  border:
+    1px solid #c8d9e8;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #fbfdff;
+
+  color: #173d5f;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.create-trip-field input::placeholder {
+  color: #97aabd;
+
+  font-size: 13px;
+}
+
+.create-trip-field select {
+  cursor: pointer;
+}
+
+.create-trip-field input:focus,
+.create-trip-field select:focus,
+.create-trip-datepicker:focus {
+  border-color: #2f80ed;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(47, 128, 237, 0.10);
+}
+
+/* =========================================================
+   DATE PICKER WRAPPER
+========================================================= */
+
+.create-trip-field
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.create-trip-field
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+/* =========================================================
+   CALENDAR
+========================================================= */
+
+.pseb-calendar {
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif !important;
+
+  border:
+    1px solid
+    #c8d9e8 !important;
+
+  border-radius:
+    10px !important;
+
+  box-shadow:
+    0 10px 28px
+    rgba(20, 50, 80, 0.18) !important;
+
+  overflow: hidden;
+}
+
+.pseb-calendar
+.react-datepicker__header {
+  background:
+    #eef4f9 !important;
+
+  border-bottom:
+    1px solid
+    #d7e2ea !important;
+
+  padding-top:
+    14px !important;
+}
+
+.pseb-calendar
+.react-datepicker__current-month {
+  color:
+    #17354a !important;
+
+  font-size:
+    16px !important;
+
+  font-weight:
+    700 !important;
+
+  margin-bottom:
+    10px !important;
+}
+
+.pseb-calendar
+.react-datepicker__day-name {
+  color:
+    #426579 !important;
+
+  font-size:
+    12px !important;
+
+  font-weight:
+    700 !important;
+}
+
+.pseb-calendar
+.react-datepicker__day {
+  width:
+    36px !important;
+
+  height:
+    36px !important;
+
+  line-height:
+    36px !important;
+
+  margin:
+    3px !important;
+
+  border-radius:
+    7px !important;
+
+  color:
+    #17354a !important;
+
+  font-size:
+    13px !important;
+
+  font-weight:
+    600 !important;
+}
+
+.pseb-calendar
+.react-datepicker__day:hover {
+  background:
+    #e2edf7 !important;
+}
+
+.pseb-calendar
+.react-datepicker__day--selected {
+  background:
+    #2179e8 !important;
+
+  color:
+    #ffffff !important;
+}
+
+.pseb-calendar
+.react-datepicker__day--today {
+  border:
+    1px solid
+    #2179e8 !important;
+}
+
+.pseb-calendar
+.react-datepicker__time-container {
+  border-left:
+    1px solid
+    #d7e2ea !important;
+}
+
+.pseb-calendar
+.react-datepicker__time-list-item {
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif !important;
+
+  font-size:
+    12px !important;
+}
+
+.pseb-calendar
+.react-datepicker__time-list-item--selected {
+  background:
+    #2179e8 !important;
+
+  color:
+    #ffffff !important;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.create-trip-error {
+  grid-column:
+    1 / -1;
+
+  width: 100%;
+
+  padding:
+    11px
+    14px;
+
+  border:
+    1px solid #efc3c8;
+
+  border-radius:
+    8px;
+
+  background:
+    #fff1f2;
+
+  color:
+    #9a2732;
+
+  font-size:
+    12.5px;
+
+  font-weight:
+    600;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.create-trip-actions {
+  grid-column:
+    1 / -1;
+
+  width: 100%;
+
+  margin-top:
+    4px;
+
+  padding-top:
+    20px;
+
+  border-top:
+    1px solid #e7eef4;
+
+  display: flex;
+
+  justify-content:
+    flex-end;
+
+  gap: 10px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.create-trip-submit,
+.create-trip-cancel {
+  min-width:
+    141px;
+
+  height:
+    45px;
+
+  padding:
+    0
+    20px;
+
+  border:
+    none;
+
+  border-radius:
+    9px;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size:
+    11px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.create-trip-submit {
+  background:
+    #2179e8;
+
+  color:
+    #ffffff;
+
+  box-shadow:
+    0 4px 10px
+    rgba(29, 120, 232, 0.18);
+}
+
+.create-trip-submit:hover:not(:disabled) {
+  transform:
+    translateY(-1px);
+
+  background:
+    #176fd9;
+
+  box-shadow:
+    0 6px 14px
+    rgba(29, 120, 232, 0.23);
+}
+
+.create-trip-submit:disabled {
+  opacity: 0.6;
+
+  cursor:
+    not-allowed;
+
+  box-shadow:
+    none;
+}
+
+.create-trip-cancel {
+  background:
+    #e7edf3;
+
+  color:
+    #34536c;
+}
+
+.create-trip-cancel:hover {
+  background:
+    #dce5ed;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (
+  max-width: 850px
+) {
+  .create-trip-content {
+    padding:
+      20px
+      16px
+      40px;
+  }
+
+  .create-trip-header {
+    min-height:
+      92px;
+
+    padding:
+      16px
+      20px;
+  }
+
+  .create-trip-header-icon {
+    width:
+      54px;
+
+    height:
+      54px;
+
+    min-width:
+      54px;
+
+    margin-right:
+      15px;
+  }
+
+  .create-trip-header h1 {
+    font-size:
+      27px;
+  }
+
+  .create-trip-form {
+    padding:
+      22px
+      18px;
+  }
+}
+
+@media (
+  max-width: 650px
+) {
+  .create-trip-form {
+    grid-template-columns:
+      1fr;
+
+    row-gap:
+      18px;
+  }
+
+  .create-trip-field label {
+    text-align:
+      left;
+  }
+
+  .create-trip-actions {
+    grid-column:
+      auto;
+
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+  }
+
+  .create-trip-submit,
+  .create-trip-cancel {
+    width:
+      100%;
+  }
+}
+
+@media (
+  max-width: 520px
+) {
+  .create-trip-content {
+    padding:
+      14px;
+  }
+
+  .create-trip-header {
+    min-height:
+      82px;
+
+    border-radius:
+      12px;
+  }
+
+  .create-trip-header-icon {
+    width:
+      48px;
+
+    height:
+      48px;
+
+    min-width:
+      48px;
+
+    border-radius:
+      13px;
+  }
+
+  .create-trip-header h1 {
+    font-size:
+      23px;
+  }
+
+  .create-trip-section {
+    min-height:
+      60px;
+
+    border-radius:
+      11px;
+  }
+
+  .create-trip-section span {
+    font-size:
+      16px;
+  }
+
+  .create-trip-form {
+    padding:
+      18px
+      15px;
+
+    border-radius:
+      12px;
+  }
+}

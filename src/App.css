@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FULL PAGE */
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* SINGLE DARK BLUE BACKGROUND */
+  background: #06283f;
+
+  padding: 30px;
+}
+
+/* LOGIN CARD */
+
+.login-card {
+  width: 460px;
+  background: #f4f6f7;
+
+  border-radius: 12px;
+
+  padding: 48px 48px 32px;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+}
+
+/* LOGOS */
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 85px;
+
+  margin-bottom: 36px;
+}
+
+.tech-logo {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.tech-small {
+  color: #377f92;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  margin-bottom: 3px;
+}
+
+.tech-destination {
+  color: #7d8b94;
+
+  font-size: 8px;
+
+  margin-bottom: 4px;
+}
+
+.tech-pakistan {
+  color: #00a593;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.pseb-logo {
+  width: 58px;
+  height: 58px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #132d43;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* TITLE */
+
+.login-card h1 {
+  text-align: center;
+
+  color: #17354a;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.title-line {
+  width: 66px;
+  height: 3px;
+
+  margin: 0 auto 30px;
+
+  background: #16889d;
+
+  border-radius: 20px;
+}
+
+/* FORM */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #17354a;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 48px;
+
+  border: 1px solid #d8e0e5;
+  border-radius: 4px;
+
+  background: white;
+
+  padding: 0 14px;
+
+  color: #243c4e;
+  font-size: 14px;
+
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #9da8af;
+}
+
+.form-group input:focus {
+  border-color: #1a8298;
+}
+
+/* BUTTON */
+
+.sign-in-btn {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 4px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: #031d31;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.sign-in-btn:hover {
+  background: #0a3551;
+}
+
+/* FOOTER */
+
+.divider {
+  width: 100%;
+  height: 1px;
+
+  background: #d9e1e5;
+
+  margin: 27px 0 20px;
+}
+
+.organization {
+  text-align: center;
+
+  color: #24465a;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.login-note {
+  text-align: center;
+
+  color: #80909b;
+
+  font-size: 9px;
+
+  margin-top: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+  .login-page {
+    padding: 18px;
+  }
+
+  .login-card {
+    width: 100%;
+
+    padding: 38px 26px 28px;
+  }
+
+  .brand-row {
+    gap: 45px;
+  }
+
+  .login-card h1 {
+    font-size: 24px;
+  }
+}

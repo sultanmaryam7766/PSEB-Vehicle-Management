@@ -1,0 +1,2017 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f3f7fb;
+  color: #0c2d50;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.maintenance-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f5f9fc 0%,
+      #eef4f9 100%
+    );
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.maintenance-sidebar {
+  width: 255px;
+  min-width: 255px;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  position: sticky;
+  top: 0;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 14px 7px 12px;
+
+  background: #0b355d;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,0.05);
+
+  overflow: hidden;
+
+  z-index: 20;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.maintenance-welcome {
+  position: relative;
+
+  width: 100%;
+
+  height: 67px;
+  min-height: 67px;
+
+  margin: 0 0 5px;
+
+  padding:
+    12px
+    40px
+    8px
+    72px;
+
+  display: flex;
+  align-items: flex-start;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  color: #ffffff;
+}
+
+
+.maintenance-welcome::before {
+  content: "P";
+
+  position: absolute;
+
+  left: 7px;
+  top: 10px;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4386ff,
+      #5754ef
+    );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+
+.maintenance-welcome > span {
+  margin-top: 1px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+.maintenance-welcome > span::after {
+  content: "Administrator";
+
+  display: block;
+
+  margin-top: 5px;
+
+  color: #c3d3e0;
+
+  font-size: 9px;
+  font-weight: 400;
+}
+
+
+.maintenance-welcome
+.global-notification-bell {
+  position: absolute !important;
+
+  top: 10px !important;
+  right: 5px !important;
+
+  width: 30px !important;
+  height: 30px !important;
+
+  transform: none !important;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.maintenance-menu {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+
+  overflow: hidden;
+
+  scrollbar-width: none;
+}
+
+.maintenance-menu::-webkit-scrollbar {
+  display: none;
+}
+
+
+.maintenance-menu-btn {
+  position: relative;
+
+  width: 100%;
+
+  height: 41px;
+  min-height: 41px;
+
+  margin: 0;
+
+  padding:
+    0
+    11px
+    0
+    47px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #eef5fb;
+
+  display: flex;
+  align-items: center;
+
+  text-align: left;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 11.5px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.17s ease;
+}
+
+
+.maintenance-menu-btn::before {
+  content: "";
+
+  position: absolute;
+
+  left: 14px;
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px 17px;
+}
+
+
+/* DASHBOARD */
+
+.maintenance-menu-btn:nth-child(1)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='7'/%3E%3Crect x='14' y='3' width='7' height='7'/%3E%3Crect x='3' y='14' width='7' height='7'/%3E%3Crect x='14' y='14' width='7' height='7'/%3E%3C/svg%3E");
+}
+
+
+/* VEHICLES */
+
+.maintenance-menu-btn:nth-child(2)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 17h14'/%3E%3Cpath d='M6 17v2M18 17v2'/%3E%3Cpath d='M4 13l2-5h12l2 5'/%3E%3Crect x='3' y='12' width='18' height='5' rx='2'/%3E%3Ccircle cx='7' cy='15' r='1'/%3E%3Ccircle cx='17' cy='15' r='1'/%3E%3C/svg%3E");
+}
+
+
+/* VEHICLE HISTORY */
+
+.maintenance-menu-btn:nth-child(3)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12a9 9 0 1 0 3-6.7'/%3E%3Cpath d='M3 4v6h6'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E");
+}
+
+
+/* DRIVERS */
+
+.maintenance-menu-btn:nth-child(4)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='8' r='3'/%3E%3Cpath d='M3 19c0-3 2.5-5 6-5s6 2 6 5'/%3E%3Ccircle cx='17' cy='9' r='2'/%3E%3Cpath d='M16 14c3 0 5 1.5 5 4'/%3E%3C/svg%3E");
+}
+
+
+/* TRIPS */
+
+.maintenance-menu-btn:nth-child(5)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 21c0-7 4-7 4-14'/%3E%3Cpath d='M19 21c0-7-4-7-4-14'/%3E%3C/svg%3E");
+}
+
+
+/* FUEL */
+
+.maintenance-menu-btn:nth-child(6)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 3h8v18H6z'/%3E%3Cpath d='M8 7h4'/%3E%3Cpath d='M14 8h2l2 2v7a2 2 0 0 0 4 0v-6l-2-2'/%3E%3C/svg%3E");
+}
+
+
+/* MAINTENANCE */
+
+.maintenance-menu-btn:nth-child(7)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 6a4 4 0 0 0-5 5L3 17l4 4 6-6a4 4 0 0 0 5-5l-3 3-3-3z'/%3E%3C/svg%3E");
+}
+
+
+/* DOCUMENTS */
+
+.maintenance-menu-btn:nth-child(8)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 2h8l4 4v16H6z'/%3E%3Cpath d='M14 2v5h5'/%3E%3Cpath d='M9 12h6M9 16h6'/%3E%3C/svg%3E");
+}
+
+
+/* INCIDENTS */
+
+.maintenance-menu-btn:nth-child(9)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3L2 21h20L12 3z'/%3E%3Cpath d='M12 9v5'/%3E%3Cpath d='M12 18h.01'/%3E%3C/svg%3E");
+}
+
+
+/* EXPENSES */
+
+.maintenance-menu-btn:nth-child(10)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='2' width='14' height='20' rx='2'/%3E%3Cpath d='M8 7h8M8 11h8M8 15h4'/%3E%3C/svg%3E");
+}
+
+
+/* REPORTS */
+
+.maintenance-menu-btn:nth-child(11)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20V10M10 20V4M16 20v-7M22 20H2'/%3E%3C/svg%3E");
+}
+
+
+/* USERS */
+
+.maintenance-menu-btn:nth-child(12)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3Ccircle cx='17' cy='9' r='2'/%3E%3Cpath d='M2 20c0-4 2.5-6 6-6s6 2 6 6'/%3E%3Cpath d='M15 15c4 0 6 2 6 5'/%3E%3C/svg%3E");
+}
+
+
+/* AUDIT */
+
+.maintenance-menu-btn:nth-child(13)::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dcecf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 3h6l1 2h3v16H5V5h3z'/%3E%3Cpath d='M9 11h6M9 15h4'/%3E%3C/svg%3E");
+}
+
+
+.maintenance-menu-btn:hover {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.06
+    );
+}
+
+
+.maintenance-menu-btn.active {
+  background: #1d78e8;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 13px
+    rgba(15,105,220,0.22);
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.maintenance-logout {
+  position: relative;
+
+  width: 100%;
+
+  height: 47px;
+  min-height: 47px;
+
+  margin: 10px 0 0;
+
+  padding:
+    0
+    14px
+    0
+    48px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #bd3c46;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  text-align: left;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 11.5px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.maintenance-logout::before {
+  content: "";
+
+  position: absolute;
+
+  left: 16px;
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 17l5-5-5-5'/%3E%3Cpath d='M15 12H3'/%3E%3Cpath d='M14 3h5a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5'/%3E%3C/svg%3E");
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.maintenance-content {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 100vh;
+
+  padding:
+    22px
+    24px
+    50px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f5f9fc,
+      #eef4f9
+    );
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.maintenance-header {
+  position: relative;
+
+  width: 100%;
+
+  height: 96px;
+  min-height: 96px;
+
+  margin-bottom: 18px;
+
+  padding:
+    16px
+    190px
+    16px
+    104px;
+
+  border-radius: 13px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f7fbff
+    );
+
+  border:
+    1px solid #e1eaf2;
+
+  box-shadow:
+    0 5px 16px
+    rgba(25,73,113,0.06);
+}
+
+
+.maintenance-header::before {
+  content: "🔧";
+
+  position: absolute;
+
+  left: 24px;
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 4px 13px
+    rgba(24,70,108,0.08);
+}
+
+
+.maintenance-header h1 {
+  margin: 0;
+
+  color: #0c2d50;
+
+  font-size: 31px;
+  font-weight: 800;
+
+  letter-spacing: -0.6px;
+}
+
+
+.maintenance-header::after {
+  content:
+    "Schedule services, track maintenance costs and monitor upcoming service requirements.";
+
+  margin-top: 7px;
+
+  color: #627b93;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   ADD MAINTENANCE BUTTON
+========================================= */
+
+.maintenance-actions {
+  position: absolute;
+
+  top: 43px;
+  right: 40px;
+
+  width: auto;
+
+  margin: 0;
+
+  z-index: 5;
+}
+
+
+.maintenance-add-btn {
+  height: 45px;
+
+  padding:
+    0
+    20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #187bee,
+      #0d6fe4
+    );
+
+  color: #ffffff;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 14px
+    rgba(16,108,220,0.20);
+}
+
+
+.maintenance-add-btn:hover {
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================================
+   FILTER PANEL
+========================================= */
+
+.maintenance-filters {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr
+    0.85fr
+    1.35fr
+    1fr;
+
+  gap: 8px;
+
+  margin-bottom: 22px;
+
+  padding:
+    13px
+    14px;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e2eaf1;
+
+  box-shadow:
+    0 5px 16px
+    rgba(28,72,108,0.05);
+}
+
+
+/* =========================================
+   FILTER CARDS
+========================================= */
+
+.maintenance-filter-field {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 104px;
+
+  padding:
+    13px
+    10px
+    10px
+    60px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fbfdff,
+      #f8fbfd
+    );
+
+  border:
+    1px solid #edf2f6;
+}
+
+
+.maintenance-filter-field::before {
+  position: absolute;
+
+  left: 12px;
+  top: 14px;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+
+/* LOCATION */
+
+.maintenance-filter-field:nth-child(1)::before {
+  content: "⌖";
+
+  color: #1776ea;
+
+  background: #e6f1ff;
+}
+
+
+/* MONTH */
+
+.maintenance-filter-field:nth-child(2)::before {
+  content: "▦";
+
+  color: #8a56f0;
+
+  background: #f0e8ff;
+}
+
+
+/* STATUS */
+
+.maintenance-filter-field:nth-child(3)::before {
+  content: "≡";
+
+  color: #24b676;
+
+  background: #def7ea;
+}
+
+
+/* RECORDS */
+
+.maintenance-filter-field:nth-child(4)::before {
+  content: "▤";
+
+  color: #d7a01d;
+
+  background: #fff3d2;
+}
+
+
+/* SEARCH */
+
+.maintenance-filter-field:nth-child(5)::before {
+  content: "⌕";
+
+  color: #1f7aeb;
+
+  background: #e7f1ff;
+}
+
+
+/* SEARCH ON */
+
+.maintenance-filter-field:nth-child(6)::before {
+  content: "≡";
+
+  color: #e34f94;
+
+  background: #ffe7f1;
+}
+
+
+.maintenance-filter-field label {
+  display: flex;
+  align-items: center;
+
+  min-height: 36px;
+
+  margin-bottom: 8px;
+
+  color: #334e68;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+.maintenance-filter-field select,
+.maintenance-filter-field input {
+  width: 100%;
+  height: 42px;
+
+  border:
+    1px solid #d9e4ee;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #17354a;
+
+  padding:
+    0
+    11px;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  outline: none;
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+.maintenance-filter-field
+input::placeholder {
+  color: #94a6b8;
+}
+
+
+.maintenance-filter-field input:focus,
+.maintenance-filter-field select:focus {
+  border-color: #2b7de9;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(43,125,233,0.10);
+}
+
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.maintenance-error,
+.maintenance-success {
+  margin-bottom: 15px;
+
+  padding:
+    11px
+    14px;
+
+  border-radius: 8px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+.maintenance-error {
+  background: #fdebed;
+
+  color: #a12d36;
+
+  border:
+    1px solid #f4c5c9;
+}
+
+
+.maintenance-success {
+  background: #e8f7ed;
+
+  color: #256a3c;
+
+  border:
+    1px solid #ccebd7;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.maintenance-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e1e9f0;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(27,69,103,0.06);
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.maintenance-table {
+  width: 100%;
+
+  min-width: 1100px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+
+.maintenance-table thead {
+  background:
+    linear-gradient(
+      180deg,
+      #eef5fa,
+      #e8f0f6
+    );
+}
+
+
+.maintenance-table th,
+.maintenance-table td {
+  text-align: left !important;
+
+  vertical-align: middle;
+
+  box-sizing: border-box;
+
+  white-space: normal;
+
+  overflow-wrap: anywhere;
+}
+
+
+.maintenance-table th {
+  padding:
+    17px
+    12px;
+
+  color: #143653;
+
+  font-size: 10.5px;
+  font-weight: 800;
+
+  border-bottom:
+    1px solid #dfe8ee;
+}
+
+
+.maintenance-table td {
+  padding:
+    15px
+    12px;
+
+  color: #455e72;
+
+  font-size: 10.5px;
+  font-weight: 500;
+
+  border-bottom:
+    1px solid #edf2f5;
+}
+
+
+/* JOB ID */
+
+.maintenance-table th:nth-child(1),
+.maintenance-table td:nth-child(1) {
+  width: 9%;
+}
+
+
+/* DATE */
+
+.maintenance-table th:nth-child(2),
+.maintenance-table td:nth-child(2) {
+  width: 10%;
+}
+
+
+/* VEHICLE */
+
+.maintenance-table th:nth-child(3),
+.maintenance-table td:nth-child(3) {
+  width: 15%;
+}
+
+
+/* SERVICE */
+
+.maintenance-table th:nth-child(4),
+.maintenance-table td:nth-child(4) {
+  width: 13%;
+}
+
+
+/* ODOMETER */
+
+.maintenance-table th:nth-child(5),
+.maintenance-table td:nth-child(5) {
+  width: 11%;
+}
+
+
+/* NEXT SERVICE */
+
+.maintenance-table th:nth-child(6),
+.maintenance-table td:nth-child(6) {
+  width: 16%;
+}
+
+
+/* COST */
+
+.maintenance-table th:nth-child(7),
+.maintenance-table td:nth-child(7) {
+  width: 9%;
+}
+
+
+/* STATUS */
+
+.maintenance-table th:nth-child(8),
+.maintenance-table td:nth-child(8) {
+  width: 9%;
+}
+
+
+/* ACTIONS */
+
+.maintenance-table th:nth-child(9),
+.maintenance-table td:nth-child(9) {
+  width: 12%;
+
+  text-align: center !important;
+}
+
+
+/* =========================================
+   TABLE ROWS
+========================================= */
+
+.maintenance-table
+tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+
+.maintenance-table
+tbody tr:nth-child(even) {
+  background: #fbfdff;
+}
+
+
+.maintenance-table
+tbody tr:hover {
+  background: #f4f8fc;
+}
+
+
+.maintenance-table td strong {
+  color: #17354a;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.maintenance-empty-row td {
+  height: 220px;
+
+  text-align: center !important;
+
+  color: #788b9d;
+
+  padding:
+    60px
+    20px;
+
+  font-size: 12px;
+}
+
+
+.maintenance-empty-row td::before {
+  content: "🔧";
+
+  width: 58px;
+  height: 58px;
+
+  margin:
+    0
+    auto
+    14px;
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef5fa;
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   STATUS BADGES
+========================================= */
+
+.maintenance-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 74px;
+  min-height: 27px;
+
+  padding:
+    5px
+    9px;
+
+  border-radius: 20px;
+
+  white-space: nowrap;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+.maintenance-status.scheduled {
+  background: #fff3d8;
+
+  color: #8b6b19;
+}
+
+
+.maintenance-status.in-progress {
+  background: #e5f1fb;
+
+  color: #24648f;
+}
+
+
+.maintenance-status.completed {
+  background: #e1f4e8;
+
+  color: #267348;
+}
+
+
+/* =========================================
+   NEXT SERVICE
+========================================= */
+
+.maintenance-next-service {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.maintenance-next-service strong {
+  color: #17354a;
+
+  white-space: nowrap;
+
+  font-size: 10.5px;
+}
+
+
+.maintenance-next-service span {
+  color: #718594;
+
+  font-size: 9px;
+
+  line-height: 1.25;
+}
+
+
+.maintenance-next-service
+.maintenance-due-text {
+  color: #b5333d;
+
+  font-weight: 700;
+}
+
+
+.maintenance-next-na {
+  color: #8d9ba6;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   EDIT BUTTON
+========================================= */
+
+.maintenance-edit-btn {
+  min-width: 54px;
+  min-height: 31px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  padding:
+    0
+    10px;
+
+  background: #5994bd;
+
+  color: #ffffff;
+
+  font-size: 9.5px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+
+.maintenance-edit-btn:hover {
+  background: #4f84ab;
+}
+
+
+/* =========================================
+   TABLE SCROLLBAR
+========================================= */
+
+.maintenance-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+
+.maintenance-table-wrapper::-webkit-scrollbar-track {
+  background: #eef3f7;
+}
+
+
+.maintenance-table-wrapper::-webkit-scrollbar-thumb {
+  background: #b8c7d4;
+
+  border-radius: 10px;
+}
+
+
+/* ==================================================
+   EDIT MAINTENANCE MODAL
+================================================== */
+
+.maintenance-edit-overlay {
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  z-index: 99999 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 24px !important;
+
+  background:
+    rgba(
+      5,
+      25,
+      45,
+      0.48
+    ) !important;
+
+  box-sizing: border-box !important;
+}
+
+
+.maintenance-edit-modal {
+  width: 720px !important;
+
+  max-width:
+    calc(100vw - 40px) !important;
+
+  max-height: 90vh !important;
+
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+
+  background: #ffffff !important;
+
+  border-radius: 13px !important;
+
+  border:
+    1px solid
+    #dfe8ef !important;
+
+  box-shadow:
+    0 20px 48px
+    rgba(
+      17,
+      50,
+      76,
+      0.25
+    ) !important;
+
+  color: #17354a !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.maintenance-edit-header {
+  width: 100% !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  gap: 20px !important;
+
+  padding:
+    17px
+    20px !important;
+
+  box-sizing: border-box !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      #173f64,
+      #235879
+    ) !important;
+
+  color: #ffffff !important;
+}
+
+
+.maintenance-edit-header > div {
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  gap: 3px !important;
+}
+
+
+.maintenance-edit-header h2 {
+  margin: 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: 18px !important;
+  font-weight: 800 !important;
+
+  line-height: 1.2 !important;
+}
+
+
+.maintenance-edit-header span {
+  color: #d9e5ee !important;
+
+  font-size: 10px !important;
+  font-weight: 500 !important;
+}
+
+
+.maintenance-edit-close {
+  width: 32px !important;
+  height: 32px !important;
+
+  padding: 0 !important;
+
+  border: none !important;
+
+  border-radius: 50% !important;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    ) !important;
+
+  color: #ffffff !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-size: 20px !important;
+
+  line-height: 1 !important;
+
+  cursor: pointer !important;
+
+  flex-shrink: 0 !important;
+}
+
+
+.maintenance-edit-close:hover {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.22
+    ) !important;
+}
+
+
+/* =========================================
+   EDIT FORM
+========================================= */
+
+.maintenance-edit-form {
+  width: 100% !important;
+
+  padding: 22px !important;
+
+  box-sizing: border-box !important;
+
+  background: #ffffff !important;
+}
+
+
+.maintenance-edit-grid {
+  width: 100% !important;
+
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0,1fr)
+    ) !important;
+
+  gap:
+    16px
+    18px !important;
+
+  align-items: start !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================
+   EDIT FIELD
+========================================= */
+
+.maintenance-edit-field {
+  width: 100% !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  gap: 6px !important;
+
+  min-width: 0 !important;
+
+  box-sizing: border-box !important;
+}
+
+
+.maintenance-edit-field label {
+  display: block !important;
+
+  margin: 0 !important;
+
+  color: #334e68 !important;
+
+  font-size: 11px !important;
+  font-weight: 700 !important;
+
+  line-height: 1.3 !important;
+}
+
+
+.maintenance-edit-field input,
+.maintenance-edit-field select,
+.maintenance-edit-field textarea {
+  width: 100% !important;
+
+  min-height: 42px !important;
+
+  margin: 0 !important;
+
+  padding:
+    9px
+    11px !important;
+
+  box-sizing: border-box !important;
+
+  border:
+    1px solid
+    #d6e2eb !important;
+
+  border-radius: 8px !important;
+
+  background: #fbfdff !important;
+
+  color: #17354a !important;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif !important;
+
+  font-size: 12px !important;
+  font-weight: 400 !important;
+
+  outline: none !important;
+}
+
+
+.maintenance-edit-field input:focus,
+.maintenance-edit-field select:focus,
+.maintenance-edit-field textarea:focus {
+  border-color: #2b7de9 !important;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      43,
+      125,
+      233,
+      0.09
+    ) !important;
+}
+
+
+.maintenance-edit-field textarea {
+  min-height: 85px !important;
+
+  resize: vertical !important;
+}
+
+
+.maintenance-edit-full {
+  grid-column:
+    1 / -1 !important;
+}
+
+
+/* =========================================
+   AUTO OIL BOX
+========================================= */
+
+.maintenance-auto-box {
+  width: 100% !important;
+
+  min-height: 82px !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  justify-content: center !important;
+
+  gap: 3px !important;
+
+  padding:
+    11px
+    13px !important;
+
+  box-sizing: border-box !important;
+
+  border:
+    1px solid
+    #e6cc7b !important;
+
+  border-radius: 8px !important;
+
+  background:
+    #fff9e8 !important;
+}
+
+
+.maintenance-auto-box span {
+  color: #7b641d !important;
+
+  font-size: 10px !important;
+
+  font-weight: 700 !important;
+}
+
+
+.maintenance-auto-box strong {
+  color: #17354a !important;
+
+  font-size: 18px !important;
+
+  font-weight: 800 !important;
+}
+
+
+.maintenance-auto-box small {
+  color: #6b747a !important;
+
+  font-size: 9px !important;
+}
+
+
+/* =========================================
+   NOTE
+========================================= */
+
+.maintenance-edit-note {
+  width: 100% !important;
+
+  margin-top: 18px !important;
+
+  padding:
+    12px
+    14px !important;
+
+  box-sizing: border-box !important;
+
+  border-radius: 8px !important;
+
+  background:
+    #eef5fa !important;
+
+  color: #31576d !important;
+
+  font-size: 11px !important;
+
+  line-height: 1.5 !important;
+
+  white-space: normal !important;
+
+  overflow-wrap: break-word !important;
+}
+
+
+/* =========================================
+   MODAL ACTIONS
+========================================= */
+
+.maintenance-edit-actions {
+  width: 100% !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: flex-end !important;
+
+  gap: 10px !important;
+
+  margin-top: 20px !important;
+
+  box-sizing: border-box !important;
+}
+
+
+.maintenance-edit-cancel,
+.maintenance-edit-save {
+  min-width: 120px !important;
+
+  height: 40px !important;
+
+  border: none !important;
+
+  border-radius: 7px !important;
+
+  padding:
+    0
+    16px !important;
+
+  display:
+    inline-flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif !important;
+
+  font-size: 11px !important;
+
+  font-weight: 700 !important;
+
+  cursor: pointer !important;
+
+  white-space: nowrap !important;
+}
+
+
+.maintenance-edit-cancel {
+  background:
+    #e8edf1 !important;
+
+  color:
+    #17354a !important;
+}
+
+
+.maintenance-edit-save {
+  background:
+    linear-gradient(
+      90deg,
+      #187bee,
+      #0d6fe4
+    ) !important;
+
+  color: #ffffff !important;
+}
+
+
+.maintenance-edit-cancel:hover {
+  background:
+    #dce3e8 !important;
+}
+
+
+.maintenance-edit-save:hover {
+  filter:
+    brightness(0.97);
+}
+
+
+.maintenance-edit-save:disabled {
+  opacity: 0.6 !important;
+
+  cursor:
+    not-allowed !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .maintenance-filters {
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+  }
+
+  .maintenance-actions {
+    right: 32px;
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  .maintenance-content {
+    padding: 16px;
+  }
+
+  .maintenance-header h1 {
+    font-size: 28px;
+  }
+}
+
+
+@media (max-width: 760px) {
+
+  .maintenance-page {
+    display: block;
+  }
+
+  .maintenance-sidebar {
+    width: 255px;
+    min-width: 255px;
+
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .maintenance-content {
+    padding: 14px;
+  }
+
+  .maintenance-header {
+    height: auto;
+    min-height: 110px;
+
+    padding:
+      18px
+      18px
+      18px
+      82px;
+  }
+
+  .maintenance-header::before {
+    left: 16px;
+
+    width: 50px;
+    height: 50px;
+  }
+
+  .maintenance-header h1 {
+    font-size: 25px;
+  }
+
+  .maintenance-actions {
+    position: static;
+
+    width: 100%;
+
+    margin:
+      -68px
+      0
+      24px;
+
+    padding-right: 10px;
+
+    justify-content:
+      flex-end;
+  }
+
+  .maintenance-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .maintenance-table {
+    min-width: 1100px;
+  }
+
+  .maintenance-edit-overlay {
+    padding:
+      12px !important;
+  }
+
+  .maintenance-edit-modal {
+    max-width:
+      100% !important;
+  }
+
+  .maintenance-edit-grid {
+    grid-template-columns:
+      1fr !important;
+  }
+
+  .maintenance-edit-full {
+    grid-column:
+      auto !important;
+  }
+
+  .maintenance-edit-actions {
+    flex-direction:
+      column-reverse !important;
+  }
+
+  .maintenance-edit-cancel,
+  .maintenance-edit-save {
+    width: 100% !important;
+  }
+}
+/* =========================================
+   DYNAMIC USER PROFILE
+========================================= */
+
+.maintenance-welcome {
+  position: relative;
+
+  width: 100%;
+  height: 67px;
+  min-height: 67px;
+
+  margin: 0 0 5px;
+
+  padding: 8px 38px 8px 7px;
+
+  display: flex;
+  align-items: center;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+}
+
+/* DP */
+
+.maintenance-profile-avatar {
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    #4386ff,
+    #5754ef
+  );
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+}
+
+/* NAME + ROLE */
+
+.maintenance-profile-info {
+  min-width: 0;
+
+  margin-left: 8px;
+  margin-right: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.maintenance-profile-info strong {
+  max-width: 125px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.maintenance-profile-info span {
+  margin-top: 4px;
+
+  color: #c5d6e4;
+
+  font-size: 9px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-align: left;
+}
+
+/* BELL */
+
+.maintenance-welcome .global-notification-bell {
+  position: absolute !important;
+
+  top: 18px !important;
+  right: 3px !important;
+
+  width: 30px !important;
+  height: 30px !important;
+
+  transform: none !important;
+}
+.maintenance-header::after {
+  content: none !important;
+  display: none !important;
+}

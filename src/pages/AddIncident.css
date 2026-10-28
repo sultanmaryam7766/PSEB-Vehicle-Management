@@ -1,0 +1,495 @@
+/* =========================================================
+   ADD INCIDENT
+   MODERN PSEB THEME
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f8fc;
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.add-incident-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f6f9fc 0%,
+      #eef4f9 100%
+    );
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.add-incident-content {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.add-incident-header {
+  position: relative;
+
+  width: 100%;
+  min-height: 96px;
+
+  margin-bottom: 18px;
+
+  padding: 18px 24px 18px 96px;
+
+  border: 1px solid #e0e9f1;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f7fbff 100%
+    );
+
+  display: flex;
+  align-items: center;
+
+  box-shadow:
+    0 5px 16px
+    rgba(25, 73, 113, 0.06);
+}
+
+/* Incident icon */
+
+.add-incident-header::before {
+  content: "";
+
+  position: absolute;
+
+  left: 24px;
+  top: 50%;
+
+  width: 54px;
+  height: 54px;
+
+  transform: translateY(-50%);
+
+  border-radius: 15px;
+
+  background:
+    #fff0f0
+    center / 27px 27px
+    no-repeat
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d54b55' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3L2 21h20L12 3z'/%3E%3Cpath d='M12 9v5'/%3E%3Cpath d='M12 18h.01'/%3E%3C/svg%3E");
+}
+
+.add-incident-header h1 {
+  margin: 0;
+
+  color: #0d3155;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.add-incident-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 62px;
+
+  margin-bottom: 14px;
+
+  padding: 0 20px 0 58px;
+
+  border: 1px solid #e0e9f1;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  color: #123b63;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  box-shadow:
+    0 4px 14px
+    rgba(25, 73, 113, 0.05);
+}
+
+.add-incident-section::before {
+  content: "";
+
+  position: absolute;
+
+  left: 16px;
+  top: 50%;
+
+  width: 30px;
+  height: 30px;
+
+  transform: translateY(-50%);
+
+  border-radius: 9px;
+
+  background:
+    #edf4ff
+    center / 17px 17px
+    no-repeat
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d78e8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16v16H4z'/%3E%3Cpath d='M8 8h8M8 12h8M8 16h5'/%3E%3C/svg%3E");
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.add-incident-form {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
+  padding: 24px;
+
+  border: 1px solid #e0e8ef;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 17px
+    rgba(28, 65, 98, 0.055);
+}
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.add-incident-field {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.add-incident-field.full {
+  grid-column: 1 / -1;
+}
+
+.add-incident-field label {
+  margin-bottom: 7px;
+
+  color: #345a78;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   INPUTS / SELECTS / TEXTAREA
+========================================================= */
+
+.add-incident-field input,
+.add-incident-field select,
+.add-incident-field textarea {
+  width: 100%;
+
+  border: 1px solid #cfdce7;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #fbfdff;
+
+  color: #183b59;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.add-incident-field input,
+.add-incident-field select {
+  height: 44px;
+
+  padding: 0 13px;
+}
+
+.add-incident-field textarea {
+  min-height: 105px;
+
+  padding: 11px 13px;
+
+  resize: vertical;
+
+  line-height: 1.45;
+}
+
+.add-incident-field input:focus,
+.add-incident-field select:focus,
+.add-incident-field textarea:focus {
+  border-color: #2f80ed;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(47, 128, 237, 0.10);
+}
+
+.add-incident-field input::placeholder,
+.add-incident-field textarea::placeholder {
+  color: #9aabba;
+
+  font-size: 12.5px;
+}
+
+.add-incident-field select {
+  cursor: pointer;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.add-incident-error {
+  grid-column: 1 / -1;
+
+  padding: 11px 13px;
+
+  border: 1px solid #efc3c8;
+  border-radius: 8px;
+
+  background: #fff1f2;
+
+  color: #9a2732;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.add-incident-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 4px;
+  padding-top: 18px;
+
+  border-top:
+    1px solid #edf1f5;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.add-incident-cancel,
+.add-incident-submit {
+  min-width: 122px;
+  height: 40px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 10.5px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+/* CANCEL */
+
+.add-incident-cancel {
+  background: #e9eef3;
+
+  color: #415c72;
+}
+
+.add-incident-cancel:hover {
+  background: #dfe6ec;
+}
+
+/* SUBMIT */
+
+.add-incident-submit {
+  background: #1d78e8;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 4px 10px
+    rgba(29, 120, 232, 0.18);
+}
+
+.add-incident-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  background: #166fd8;
+
+  box-shadow:
+    0 6px 14px
+    rgba(29, 120, 232, 0.24);
+}
+
+.add-incident-submit:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+  .add-incident-page {
+    padding: 16px;
+  }
+
+  .add-incident-header {
+    min-height: 86px;
+
+    padding:
+      16px
+      18px
+      16px
+      82px;
+  }
+
+  .add-incident-header::before {
+    left: 18px;
+
+    width: 50px;
+    height: 50px;
+  }
+
+  .add-incident-header h1 {
+    font-size: 24px;
+  }
+
+  .add-incident-form {
+    padding: 18px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .add-incident-field.full,
+  .add-incident-error,
+  .add-incident-actions {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .add-incident-page {
+    padding: 12px;
+  }
+
+  .add-incident-header {
+    padding-left: 74px;
+
+    border-radius: 11px;
+  }
+
+  .add-incident-header::before {
+    left: 14px;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 12px;
+  }
+
+  .add-incident-header h1 {
+    font-size: 21px;
+  }
+
+  .add-incident-section {
+    min-height: 56px;
+
+    font-size: 15px;
+  }
+
+  .add-incident-form {
+    padding: 15px;
+
+    border-radius: 11px;
+  }
+
+  .add-incident-actions {
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .add-incident-cancel,
+  .add-incident-submit {
+    width: 100%;
+  }
+}

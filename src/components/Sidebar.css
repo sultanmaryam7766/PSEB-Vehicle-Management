@@ -1,0 +1,49 @@
+.sidebar {
+  width: 180px;
+  min-height: 100vh;
+  background: #041f33;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.sidebar-welcome {
+  background: #d7ae56;
+  color: #17344a;
+  padding: 13px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-nav button,
+.sidebar-logout {
+  width: 100%;
+  border: 1px solid #164c6a;
+  background: #073451;
+  color: #dce7ed;
+  padding: 9px 11px;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidebar-nav button:hover,
+.sidebar-logout:hover {
+  background: #0d5579;
+  color: #ffffff;
+}
+
+.sidebar-logout {
+  margin-top: auto;
+}
