@@ -24,6 +24,13 @@ const db = mysql.createConnection({
   database:
     process.env.MYSQLDATABASE ||
     process.env.DB_NAME,
+
+  ssl:
+    process.env.TIDB_ENABLE_SSL === "true"
+      ? {
+          minVersion: "TLSv1.2",
+        }
+      : undefined,
 });
 
 db.connect((err) => {
@@ -32,12 +39,11 @@ db.connect((err) => {
       "Database connection failed:",
       err.message
     );
-
     return;
   }
 
   console.log(
-    "MySQL database connected successfully"
+    "MySQL/TiDB database connected successfully"
   );
 });
 
